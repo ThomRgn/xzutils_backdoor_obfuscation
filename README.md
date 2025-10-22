@@ -1,2 +1,14 @@
 # xzutils_backdoor_obfuscation
-Script to obfuscate a payload the same way as it was done by the XZ utils attack (CVE-2024-3094)
+This script recreates the obfuscation technique used for the XZ utils attack (CVE-2024-3094).
+It has been tested for xzutils v5.6.0 only.
+
+This code is provided for educational purposes only.
+
+## How to use
+Run the following
+```./obfuscate_payload.sh [your_payload]```
+
+A file `good-large_compressed.lzma` will be created, that must be placed in the folder `test/files` of the xzutils 5.6.0 source code.
+
+### Limitations
+This code has been tested with an edited `liblzma_la-crc64-fast.o` of the same size as the original. Using a larger file may not work, as the payload size is limited
